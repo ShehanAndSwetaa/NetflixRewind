@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Netflix Rewind</title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bebas+Neue:300,400,500,700|Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+</head>
+<body class="">
+  <div class="wrapper ">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="header text-center">
+            <img id="logo" class="img" width="500">
+            <h2 id="edition">2020 Edition</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
+              <div class="card card-chart">
+                <div class="card-header card-header-text">
+                  <h3 class="card-title text-center">Weekly Usage</h3>
+                </div>
+                <div class="card-body">
+                  <div id="avgTimeByDayWeek" class="ct-chart ct-pie">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="card card-chart">
+                <div class="card-header card-header-text h-100 ">
+                  <h3 class="card-title text-center">Active Most At</h3>
+                  <div class="vertical-center-div">
+                    <h3 id="active_time" class="stat card-title text-center"></h3>
+                    <h3 id="active_hour_msg" class="card-title text-center text-gray"></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="card card-chart">
+                <div class="card-header card-header-text h-100 ">
+                  <h3 class="card-title text-center">Total Time Watched</h3>
+                  <div class="vertical-center-div">
+                    <h3 id="total_time" class="stat card-title text-center"></h3>
+                    <h3 class="card-title text-center text-gray">Minutes</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-header card-header-text card-header-rose">
+                  <h3 class="card-title text-center">Daily Usage</h3>
+                </div>
+                <div class="card-body">
+                  <div id="activeHours" class="ct-chart ct-chart-margin"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-text">
+                  <h3 id="shows" class="stat card-title text-center"></h3>
+                  <h3 class="card-title text-center text-gray mb-2">Shows Watched</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-text">
+                  <h3 id="devices" class="stat card-title text-center"></h3>
+                  <h3 class="card-title text-center text-gray mb-2">Devices</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-text">
+                  <h3 id="movies" class="stat card-title text-center"></h3>
+                  <h3 class="card-title text-center text-gray mb-2">Movies</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="bingedShows">
+            <h3>Top 3 Binged Shows</h3>
+            <br>
+            <div class="row">
+            <div class="col-md-4">
+              <div class="card card-product">
+                <div class="card-header card-header-image" data-header-animation="true">
+                  <img id="show0_img" class="img" src="" alt="Show Image">
+                </div>
+                <div class="card-body">
+                  <h4 id="show0" class="card-title text-center"></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-product">
+                <div class="card-header card-header-image" data-header-animation="true">
+                  <img id="show1_img" class="img" src="" alt="Show Image">
+                </div>
+                <div class="card-body">
+                  <h4 id="show1" class="card-title text-center"></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-product">
+                <div class="card-header card-header-image" data-header-animation="true">
+                  <img id="show2_img" class="img" src="" alt="Show Image">
+                </div>
+                <div class="card-body">
+                  <h4 id="show2" class="card-title text-center"></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-text">
+                  <h3 class="card-title text-center">Top 5 Genres</h3>
+                </div>
+                <div class="card-body">
+                  <div id="topGenres" class="ct-chart ct-chart-margin"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-text">
+                  <h3 class="card-title text-center">Monthly Usage</h3>
+                </div>
+                <div class="card-body">
+                  <div id="hoursPerMonth" class="ct-chart ct-chart-margin"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a>CREATORS:</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/swetaasuresh/" target="_blank">
+                  SWETAA
+                </a>
+              </li>
+              <li>
+                <a href="https://shehansuresh.me/" target="_blank">
+                  SHEHAN
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right">
+            &copy; 2021 made with <i class="material-icons">favorite</i>
+          </div>
+        </div>
+      </footer>
+  </div>
+</body>
+</html>

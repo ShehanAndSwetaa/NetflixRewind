@@ -1,0 +1,118 @@
+body {
+    background-color: black;
+    width: 250px;
+    height: 150px;
+    font-family: 'Bebas Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: #141414;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+p {
+    color: #5b5b5b
+}
+
+#disclaimer {
+    font-size: x-small;
+}
+
+.logo {
+    width: 200px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.rewindBtn {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e50914;
+}
+
+.button-default {
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    position: relative;
+    display: block;
+    padding: 12px 25px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 18px;
+    color: #221f1f;
+    outline: none;
+    border: none;
+    background-color: #e50914;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.button {
+    overflow: hidden;
+    color: white;
+    transition: color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    margin: 0 auto;
+}
+
+.button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.button:after {
+    background: #b1060f;
+    transform: translateX(-101%);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.button:after,
+.button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:hover:after {
+    transform: translateX(0);
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
